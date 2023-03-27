@@ -1,0 +1,53 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>selling</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label>Vegetable Name</ion-label>
+      <ion-select [(ngModel)]="veg_name">
+
+        <div *ngFor = "let vegitable of vegitables$|async">
+          <ion-select-option value= "{{vegitable.veg_name}}"> {{vegitable.veg_name}} </ion-select-option>
+        </div>
+
+      </ion-select>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Description</ion-label>
+    </ion-item>
+    <ion-item lines="none" class="custom-textarea">
+      <ion-textarea rows="5" [(ngModel)]="description"></ion-textarea>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-label>Price</ion-label>
+    </ion-item>
+    <ion-item lines="none" class="custom-textarea">
+      <ion-input type="text" [(ngModel)]="price"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none">
+      <ion-checkbox slot="start" (ionChange)="updateVariable($event)"></ion-checkbox>
+      <ion-label>Negotiable</ion-label>
+    </ion-item>
+
+  </ion-list>
+
+  <div class="submit-button-container">
+    <button class="submit-button" (click) = "addsell()">Post ad</button>
+  </div>
+
+
+
+</ion-content>
+
+
+

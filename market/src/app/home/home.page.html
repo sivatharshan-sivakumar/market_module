@@ -1,0 +1,32 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      market
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-card (click)="goToBuy()">
+    <img alt="image is not available" src="assets/buy.jpg" height= "100%" width= "100%" />
+    <ion-card-header>
+      <ion-card-title>Buying</ion-card-title>
+      <ion-card-subtitle>Make your purchase</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      You can choose your desired products and their quantity.
+    </ion-card-content>
+  </ion-card>
+  <ion-card (click)="goToSell()">
+    <img alt="image is not available" src="assets/sell.jpg" height= "100%" width= "100%"/>
+    <ion-card-header>
+      <ion-card-title>Selling</ion-card-title>
+      <ion-card-subtitle>Great place to sell your products</ion-card-subtitle>
+    </ion-card-header>
+  
+    <ion-card-content>
+      i will add description for this
+    </ion-card-content>
+  </ion-card>
+</ion-content>
